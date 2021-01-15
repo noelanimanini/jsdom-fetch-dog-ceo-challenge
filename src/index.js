@@ -34,10 +34,16 @@ function addBreeds(json) {
                 newBreed.setAttribute("style", "color:blue");
             })
         dogBreed.appendChild(newBreed)
-        state = 1
         })    
+        state = 1
     } else {
-        
+        let o = document.querySelector('#breed-dropdown') 
+        let c = o.value
+        Object.keys(json['message']).forEach(function(breed){
+            if (breed.startsWith(c))
+            let newBreed = document.createElement('li')
+            newBreed.innerText = breed
+        }
     }
    
 }
